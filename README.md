@@ -42,3 +42,6 @@ password_gen is the name of the Docker image you built.
 
 4. Access the Application
 Open a web browser and go to http://localhost:5000 to access the Password Generator app.
+
+### Screenshot
+![image](https://github.com/user-attachments/assets/4b42a88a-8270-48f4-80c7-ffae0cb9d60e)
