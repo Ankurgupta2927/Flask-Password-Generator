@@ -10,9 +10,9 @@ This project is a simple web application for generating passwords using Flask. U
 - **`requirements.txt`**: Contains the Python dependencies for the project.
 - **`README.md`**: This file, containing the project documentation.
 - **`static/`**: Contains static files such as CSS, JavaScript, and images.
-- ** `style.css`: CSS styles for the application.
+- **`style.css`**: CSS styles for the application.
 - **`templates/`**: Contains HTML templates for rendering pages.
-- **`index.html`: HTML template for the password generator form and result.
+- **`index.html`**: HTML template for the password generator form and result.
 
 ```bash
 ## Installation
@@ -47,4 +47,5 @@ Open a web browser and go to http://localhost:5000 to access the Password Genera
 
 ```
 ### Screenshot
-![image](https://github.com/user-attachments/assets/0ae8a648-4ebe-4e19-a8bf-12230b9a6dcf)
+![image](https://github.com/user-attachments/assets/ab25d36c-4e70-4a50-baf0-efecfc4f0b49)
+
