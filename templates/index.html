@@ -1,19 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>{{ title }}</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script>
+        function copyToClipboard() {
+            const passwordText = document.getElementById('generated-password').innerText;
+            navigator.clipboard.writeText(passwordText).then(() => {
+                // Change button color to green on click
+                const copyButton = document.getElementById('copy-button');
+                copyButton.classList.add('copied');
+                // Reset button color after 2 seconds
+                setTimeout(() => copyButton.classList.remove('copied'), 2000);
+            }).catch(err => {
+                console.error('Failed to copy password: ', err);
+            });
+        }
 
+        function validateLengthInput() {
+            const lengthInput = document.getElementById('length');
+            if (lengthInput.value === '') {
+                lengthInput.value = '0';
+            }
+        }
+    </script>
+</head>
 <body>
-    <div class="App">
-        <header class="App-header">
-            <img src="{{ url_for('static', filename='Octocat.png') }}" class="App-logo" alt="logo" />
-            <p>
-                GitHub Codespaces <span class="heart">♥️</span> Flask
-            </p>
-            <p class="small">
-                Edit <code>templates/index.html</code> and refresh to see your changes!
-            </p>
-        </header>
+    <div class="container">
+        <h1>Password Generator</h1>
+        <form method="post" onsubmit="validateLengthInput()">
+            <label for="length">Password Length:</label>
+            <input type="number" id="length" name="length" min="0" required><br>
+
+            <input type="checkbox" id="uppercase" name="uppercase">
+            <label for="uppercase">Include Uppercase Letters</label><br>
+
+            <input type="checkbox" id="lowercase" name="lowercase">
+            <label for="lowercase">Include Lowercase Letters</label><br>
+
+            <input type="checkbox" id="digits" name="digits">
+            <label for="digits">Include Digits</label><br>
+
+            <input type="checkbox" id="special" name="special">
+            <label for="special">Include Special Characters</label><br>
+
+            <button type="submit">Generate Password</button>
+        </form>
+
+        {% if password %}
+            <h2>Generated Password:</h2>
+            <p class="password" id="generated-password">{{ password }}</p>
+            <button id="copy-button" onclick="copyToClipboard()">Copy Password</button>
+        {% endif %}
     </div>
 </body>
-
 </html>
