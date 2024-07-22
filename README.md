@@ -1,3 +1,4 @@
+
 # Password Generator Flask App
 
 This project is a simple web application for generating passwords using Flask. Users can specify the length and types of characters to include in the generated password. The app is containerized using Docker for easy deployment.
@@ -9,10 +10,11 @@ This project is a simple web application for generating passwords using Flask. U
 - **`requirements.txt`**: Contains the Python dependencies for the project.
 - **`README.md`**: This file, containing the project documentation.
 - **`static/`**: Contains static files such as CSS, JavaScript, and images.
-  - `style.css`: CSS styles for the application.
+- ** `style.css`: CSS styles for the application.
 - **`templates/`**: Contains HTML templates for rendering pages.
-  - `index.html`: HTML template for the password generator form and result.
+- **`index.html`: HTML template for the password generator form and result.
 
+```bash
 ## Installation
 
 To run this application locally using Docker, follow these steps:
@@ -21,8 +23,8 @@ To run this application locally using Docker, follow these steps:
 
 First, clone the repository to your local machine:
 
-```bash
-git clone https://github.com/yourusername/password-generator-app.git
+
+https://github.com/Ankurgupta2927/Flask-Password-Generator.git
 cd password-generator-app
 
 2. Build the Docker Image
@@ -43,5 +45,6 @@ password_gen is the name of the Docker image you built.
 4. Access the Application
 Open a web browser and go to http://localhost:5000 to access the Password Generator app.
 
+```
 ### Screenshot
-![image](https://github.com/user-attachments/assets/4b42a88a-8270-48f4-80c7-ffae0cb9d60e)
+![image](https://github.com/user-attachments/assets/0ae8a648-4ebe-4e19-a8bf-12230b9a6dcf)
